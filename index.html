@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creativity</title>
+    <link rel="stylesheet" href="demo.css">
+    
+</head>
+<body>
+<div class="overall">
+    <center>
+        <div class="one">
+            <h2>TO-DO-LIST</h2>
+            <input id="entered"><button class="but"  onclick="add()">Add</button>
+            <ul id="list-container">
+                  <li>hello
+                    <button class="delete" onclick="dlt(event)">Delete</button>
+                 </li>
+            </ul>
+        </div>
+     </center>
+</div>
+</body>
+</html>
+<script>
+    var ul=document.getElementById("list-container")
+    var entered=document.getElementById("entered")
+    function add()
+    {
+        if(entered.value === '')
+        {
+            alert("you must entered something!")
+        }
+        else
+        {
+        var listitem=document.createElement("li")
+        listitem.innerHTML=entered.value+'<button onclick="dlt(event)">delete</button>'
+        ul.append(listitem)
+        }
+    }
+
+    function dlt(event)
+    {
+        event.target.parentElement.remove()
+    }
+
+    function lines(event)
+
+    {
+        list
+
+    }
+
+</script>
+
